@@ -30,16 +30,19 @@ const employeeSurvey = [
     type: "input",
     name: "office",
     message: "What is the manager's office number?",
+    when: answer.role === "manager",
   },
   {
     type: "input",
     name: "github",
     message: "What is the engineer's Github username?",
+    when: answer.role === "engineer",
   },
   {
     type: "input",
     name: "school",
     message: "What school does the intern attend?",
+    when: answer.role === "intern",
   },
   {
     type: "confirm",
