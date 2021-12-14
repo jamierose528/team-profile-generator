@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
-const Manager = require("./lib/Manager");
+// const Engineer = require("./lib/Engineer");
+// const Intern = require("./lib/Intern");
+// const Manager = require("./lib/Manager");
 
 const employeeSurvey = [
   {
@@ -30,19 +30,19 @@ const employeeSurvey = [
     type: "input",
     name: "office",
     message: "What is the manager's office number?",
-    when: answer.role === "manager",
+    when: (answers) => answer.role === "manager",
   },
   {
     type: "input",
     name: "github",
     message: "What is the engineer's Github username?",
-    when: answer.role === "engineer",
+    when: (answers) => answer.role === "engineer",
   },
   {
     type: "input",
     name: "school",
     message: "What school does the intern attend?",
-    when: answer.role === "intern",
+    when: (answers) => answer.role === "intern",
   },
   {
     type: "confirm",
