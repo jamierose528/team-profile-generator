@@ -89,21 +89,5 @@ const generateBody = (cards) => {
       </body>
     </html>`;
 };
-// const anotherArray = [];
-// anotherArray.push(
-//   employeeData
-//     .filter((manager) => manager.getRole() === "Manager")
-//     .map((manager) => generateManager(manager))
-// );
-// anotherArray.push(
-//   employeeData
-//     .filter((engineer) => engineer.getRole() === "Engineer")
-//     .map((engineer) => generateEngineer(engineer))
-// );
-// anotherArray.push(
-//   employeeData
-//     .filter((intern) => intern.getRole() === "Intern")
-//     .map((intern) => generateIntern(intern))
-// );
 
 module.exports = generateHtml;
